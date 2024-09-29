@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
-    font-family: inter sans-serif;
+    font-family: "Inter", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-body{
+body {
     padding: 0;
     margin: 0;
     background-color: #2f3640;
@@ -12,19 +15,20 @@ body{
     height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center; /* Center content vertically */
     text-align: center;
 }
 
-.container{
+.container {
     width: 350px;
     padding: 20px;
     margin: 15px;
     background-color: #fff;
     border-radius: 25px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.input-container{
+.input-container {
     width: 100%;
     display: flex;
     align-items: center;
@@ -33,38 +37,38 @@ body{
     overflow: hidden;
 }
 
-.city-input{
+.city-input {
     flex: 1;
     height: 30px;
     border: none;
     font-size: 16px;
-    outline:none;
+    outline: none;
     padding: 10px;
 }
 
-.search-icon{
+.search-icon {
     padding: 10px;
     height: 30px;
     cursor: pointer;
 }
 
-.search-icon img{
-    margin-top: 5px;
+.search-icon img {
+    margin-top: -5px;
 }
 
-.images{
+.images {
     text-align: center;
     height: 200px;
     margin-bottom: 10px;
 }
 
-.images img{
+.images img {
     width: 120px;
     height: 120px;
     margin: 25px;
 }
 
-.temp,.location,.country{
+.temp, .location, .country {
     margin-top: 5px;
     font-size: 35px;
     color: #333;
@@ -72,23 +76,23 @@ body{
     text-align: center;
 }
 
-.temp{
+.temp {
     font-weight: 500;
 }
 
-.location{
+.location {
     color: #ffbc00;
     font-weight: 400;
     font-size: 40px;
 }
 
-.country{
+.country {
     font-size: 18px;
     color: #888;
     font-weight: 500;
 }
 
-.cord{
+.cord {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +101,7 @@ body{
     text-align: center;
 }
 
-.cord div{
+.cord div {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -105,42 +109,42 @@ body{
     padding: 10px;
 }
 
-.cord div span{
+.cord div span {
     font-size: 14px;
 }
 
 .humidity-percent,
 .wind-percent,
-.cord div span:nth-child(2){
+.cord div span:nth-child(2) {
     font-size: 18px;
     font-weight: bold;
     color: #3f3737;
     padding-top: 5px;
 }
 
-.data-container{
+.data-container {
     display: flex;
     justify-content: space-between;
     margin: 10px;
 }
 
-.elements{
+.elements {
     text-align: center;
 }
 
-.icon{
+.icon {
     width: 50px;
     height: 50px;
 }
 
-.text{
+.text {
     font-size: 12px;
     color: #1b1a1a;
 }
 
 .loading-message,
-.Loading-error,
-.city-not-found{
+.loading-error,
+.city-not-found {
     margin-top: 10px;
     color: #888;
     font-size: 25px;
@@ -148,4 +152,86 @@ body{
     text-align: center;
 }
 
- 
+/* Media Queries for Responsiveness */
+
+/* Laptops and Tablets */
+@media (max-width: 1024px) {
+    .container {
+        width: 80%;
+    }
+
+    .location {
+        font-size: 36px;
+    }
+
+    .temp {
+        font-size: 32px;
+    }
+
+    .country {
+        font-size: 16px;
+    }
+
+    .images img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .humidity-percent,
+    .wind-percent {
+        font-size: 16px;
+    }
+
+    .text {
+        font-size: 11px;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .location {
+        font-size: 28px;
+    }
+
+    .temp {
+        font-size: 24px;
+    }
+
+    .country {
+        font-size: 14px;
+    }
+
+    .images img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .humidity-percent,
+    .wind-percent {
+        font-size: 14px;
+    }
+
+    .cord div span {
+        font-size: 12px;
+    }
+
+    .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .text {
+        font-size: 10px;
+    }
+
+    .loading-message,
+    .loading-error,
+    .city-not-found {
+        font-size: 20px;
+    }
+}

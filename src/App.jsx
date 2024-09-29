@@ -68,7 +68,7 @@ WeatherDetails.propTypes = {
 function App() {
   let api_key = "514385a59346d9dc2a3a2f250463ee88";
 
-  const [text,setText] = useState("chennai");
+  const [text,setText] = useState("madurai");
   const [icon,setIcon] = useState(sunIcon);
   const [temp,setTemp] = useState(0);
   const [city,setCity] = useState("");
